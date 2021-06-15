@@ -133,14 +133,35 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">題目-2 << <a href='題目-2.html'>Previous</a> <a href='W6進度.html'>Next</a> >> W6進度<br /><h1>W5進度</h1>
-<p>齒輪箱</p>
-<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/W9A1Jn5drKk" width="560"></iframe></p>
-<p>連桿1</p>
-<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/78grlCHElkE" width="560"></iframe></p>
-<p>連桿2</p>
-<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/Rlip7dLG7uU" width="560"></iframe></p>
-<br />題目-2 << <a href='題目-2.html'>Previous</a> <a href='W6進度.html'>Next</a> >> W6進度</div>
+    <div id="tipue_search_content">task1 << <a href='task1.html'>Previous</a> <a href='W15.html'>Next</a> >> W15<br /><h1>task2</h1>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/owEPC3BUrAA" width="560"></iframe></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">import sim as vrep
+import sys
+# child threaded script: 
+#simExtRemoteApiStart(19999)
+ 
+vrep.simxFinish(-1)
+ 
+clientID = vrep.simxStart('127.0.0.1', 19999, True, True, 5000, 5)
+ 
+if clientID!= -1:
+    print("Connected to remote server")
+else:
+    print('Connection not successful')
+    sys.exit('Could not connect')
+ 
+errorCode,main_handle=vrep.simxGetObjectHandle(clientID,'main',vrep.simx_opmode_oneshot_wait)
+ 
+
+ 
+if errorCode == -1:
+    print('Can not find main_handle')
+    sys.exit()
+ 
+errorCode=vrep.simxSetJointTargetVelocity(clientID,main_handle,20, vrep.simx_opmode_oneshot_wait)
+</pre>
+<p>檔案連結:<a href="https://drive.google.com/file/d/1rB2eq-nzC3aqGOcemEeVpwfdjD2cbrZf/view?usp=sharing">https://drive.google.com/file/d/1rB2eq-nzC3aqGOcemEeVpwfdjD2cbrZf/view?usp=sharing</a></p>
+<br />task1 << <a href='task1.html'>Previous</a> <a href='W15.html'>Next</a> >> W15</div>
         
     <!-- footer -->
       <div class="container">
